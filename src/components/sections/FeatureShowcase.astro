@@ -1,51 +1,54 @@
 ---
 import { Image } from "astro:assets";
-import image_1 from "@images/toolbar.webp";
-import image_2 from "@images/graph.webp";
-import image_3 from "@images/dashboard.webp";
+import Button from "@ui/Button.astro";
+import image_1 from "@images/Benjamin.jpeg";
+import image_2 from "@images/Emirhan.jpeg";
+import image_3 from "@images/Jannis.png";
+import image_4 from "@images/Mario.png";
+import image_LinkedIn from "@images/InBug-White.png";
 
 // Content for the section title and subtitle
-const title = `<span class="text-teal-700">Data</span><span class="font-normal text-slate-400">Nova</span>'s Powerful Analytics Suite`;
-const subTitle = `Discover how DataNova transforms your Excel workspace into a comprehensive analytics powerhouse, making data analysis accessible and actionable.`;
+const title = "Das Team";
+const subTitle = "LPRD ist eine Gruppe von vier Studenten, die eine visionäre Sigange Lösung entwickeln."
 
 // Features list for displaying the key highlights
 
 const features = [
   {
-    title: "Native Excel integration", // Feature title
+    title: "Benjamin Klarić", // Feature title
     description:
-      "Work directly in Excel with our native toolbar and custom functions", // Feature description
+      "Lead Engineer Electric", // Feature description
     image: image_1, // Associated image
     class:
-      "content-center border-b border-dashed border-slate-400 py-5 sm:col-span-2 sm:p-5", // Custom CSS classes for layout and styling
-    alignment: "mx-auto mt-10 rounded-xl shadow-lg sm:w-[75%]", // Alignment and styling for the image
+      "content-center py-5 sm:p-5", // Custom CSS classes for layout and styling
+    alignment: "ml-auto mr-auto mt-10 w-[65%] rounded-xl shadow-lg sm:ml-0 sm:w-[45%]",
+    moreFeatures : ["https://www.linkedin.com/in/benjamin-klaric-70074727b/"],
   },
   {
-    title: "Comprehensive analytics suite",
-    description: `Choose from <span class="font-bold">30+</span> statistical models and <span class="font-bold">25+</span> visualization templates to unlock insights from any dataset.`,
+    title: "Emirhan Göktaş",
+    description: "Lead Developer Firmware",
     image: image_2,
-    class: "content-center py-5 sm:row-start-2 sm:p-5 sm:py-10",
-    alignment:
-      "ml-auto mr-auto mt-10 w-[65%] rounded-xl shadow-lg sm:ml-0 sm:w-[45%]",
+    class: "content-center py-5 sm:p-5",
+    alignment: "ml-auto mr-auto mt-10 w-[65%] rounded-xl shadow-lg sm:ml-0 sm:w-[45%]",
+    moreFeatures : ["https://www.linkedin.com/in/ahmet-emirhan-g%C3%B6ktas-22b607351/"],
   },
   {
-    title: "Smart analysis tools",
+    title: "Jannis Gröger",
     description:
-      "Let AI do the heavy lifting. Automatically detect patterns, spot anomalies, and get accurate forecasts from your historical data.",
+      "Lead Engineer Casing ",
     image: image_3,
     class:
-      "content-center border-t border-dashed border-slate-400 py-5 sm:row-span-2 sm:row-start-2 sm:border-l sm:border-t-0 sm:p-5 sm:text-right",
-    alignment: "ml-auto mr-auto mt-10 w-[80%] rounded-xl shadow-lg sm:mr-0",
+      "content-center py-5 sm:p-5",
+    alignment: "ml-auto mr-auto mt-10 w-[65%] rounded-xl shadow-lg sm:ml-0 sm:w-[45%]",
+    moreFeatures : ["https://www.linkedin.com/in/jannisgroeger/"],
   },
   {
-    title: "And more...",
-    class: "content-center border-t border-dashed border-slate-400 py-5 sm:p-5",
-    moreFeatures: [
-      "Works seamlessly with all modern Excel versions (2013+) on both Windows and Mac",
-      "Build interactive dashboards that update in real-time as your data changes",
-      "Access your insights anywhere through cloud integration with Google Sheets and OneDrive",
-      "Create custom reports that tell your data's story exactly how you want",
-    ],
+    title: "Mario Wegmann",
+    description: "Lead Developer Software ",
+    image: image_4,
+    class: "content-center py-5 sm:p-5",
+    alignment: "ml-auto mr-auto mt-10 w-[65%] rounded-xl shadow-lg sm:ml-0 sm:w-[45%]",
+    moreFeatures : ["https://www.linkedin.com/in/mario-wegmann/"],
   },
 ];
 ---
@@ -82,13 +85,16 @@ const features = [
               alt=""
             />
           )}
-
+<br/>
           {feature.moreFeatures && (
-            <ul class="ml-4 mt-4 w-4/5 list-inside list-disc space-y-2 text-base/6 text-slate-600 marker:text-teal-600">
-              {feature.moreFeatures.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
+            <Button
+              href={feature.moreFeatures[0]}
+              variant="primary"
+              className="inline-flex text-nowrap border-none w-10 p-2"
+              ><Image
+              class="p-0"
+              src={image_LinkedIn}
+              alt=""/></Button>
           )}
         </div>
       ))

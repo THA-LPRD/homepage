@@ -9,7 +9,7 @@ import { navigationLinks } from "@utils/navigation";
 const currentPath = Astro.url.pathname;
 
 // Call-to-action configuration for the primary button
-const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/DataNova" };
+const primaryCTA = { text: "Kontakt aufnehmen", href: "/contact" };
 ---
 
 <header
@@ -24,7 +24,7 @@ const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/
         href="/"
         aria-label="DataNova Logo"
         translate="no"
-        ><span class="font-semibold text-teal-700">Data</span>Nova</a
+        ><span class="font-semibold text-teal-700">LPRD</span> Display</a
       >
 
       <button
@@ -95,13 +95,13 @@ const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/
                 Home
               </a>
 
-              <Features />
+              <!-- <Features /> -->
 
-              <Platform />
+              <!-- <Platform /> -->
 
-              <Downloads />
+              <!-- <Downloads /> -->
 
-              <Support />
+              <!-- <Support /> -->
 
               {
                 navigationLinks.map((link) => (
@@ -129,7 +129,6 @@ const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/
             <Button
               href={primaryCTA.href}
               variant="primary"
-              target="_blank"
               className="inline-flex text-nowrap border-none py-2!"
               >{primaryCTA.text}</Button
             >

@@ -3,16 +3,16 @@ import FooterForm from "@ui/forms/FooterForm.astro";
 import ContactInfo from "@common/ContactInfo.astro";
 
 // Props for customization
-const companyName = "DataNova Analytics Inc.";
+const companyName = "LPRD Display";
 const companyDescription =
-  "DataNova Analytics Inc. is a leading business intelligence and analytics software company founded in 2018, with offices in Boston and Seattle.";
+  "LPRD ist eine Gruppe von vier Studenten, die eine visionäre Sigange Lösung entwickeln. ";
 
 // Contact information for the company
 const contactDetails = {
   address: "Seattle, WA, 98104",
   phone: "1 (833) 328-2669",
-  email: "info@datanova.com",
-  website: "www.datanova.com",
+  email: "info@lprd-display.com",
+  website: "www.lprd-display.com",
 };
 
 // Dynamic date for copyright display
@@ -23,7 +23,7 @@ const craftedBy = { name: "gulamoff", url: "https://www.gulamoff.dev/" };
 
 // Trademark notice
 const trademarkNotice =
-  "Microsoft&reg; and Excel&reg; are registered trademarks or trademarks of Microsoft Corporation";
+  "";
 ---
 
 <footer
@@ -48,15 +48,15 @@ const trademarkNotice =
       </div>
 
       {/* Contact Information Section */}
-      <div class="col-span-1 md:col-span-2 xl:col-span-1 xl:col-start-3">
+      <!-- <div class="col-span-1 md:col-span-2 xl:col-span-1 xl:col-start-3">
         <ContactInfo {...contactDetails} />
-      </div>
+      </div> -->
 
       {/* Email Subscription Form */}
-      <div class="col-span-2 md:col-span-3 xl:col-span-2">
+      <!-- <div class="col-span-2 md:col-span-3 xl:col-span-2">
         <h3 class="font-semibold text-slate-700">More information?</h3>
         <FooterForm />
-      </div>
+      </div> -->
     </div>
 
     {/* Divider before footer's bottom section */}
@@ -67,8 +67,9 @@ const trademarkNotice =
     >
       {/* Copyright and Crafted By Section */}
       <p class="text-sm text-slate-400/50">
-        &copy; 2018-{copyrightYear}
-        {companyName} Crafted by
+        &copy; 2024-{copyrightYear}
+        {companyName}
+        <!--  Crafted by
         <a
           href={craftedBy.url}
           target="_blank"
@@ -76,7 +77,7 @@ const trademarkNotice =
           class="font-medium underline underline-offset-2 outline-hidden ring-slate-400 transition duration-300 hover:text-slate-400 hover:decoration-dashed focus:outline-hidden focus-visible:ring-3"
         >
           {craftedBy.name}
-        </a>
+        </a> -->
       </p>
 
       {/* Trademark Notice */}

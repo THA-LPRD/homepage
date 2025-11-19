@@ -7,6 +7,12 @@
   import { getReadingTime } from "@utils/reading-time";
   import { getEntry, render } from "astro:content";
 
+  export function getStaticPaths() {
+  return [
+    { params: { id: "test" }},
+  ];
+}
+
   // 1. Get the slug from the incoming server request
   const { id } = Astro.params;
   if (id === undefined) {
